@@ -1,12 +1,11 @@
 import React from 'react';
 import './App.css';
-import { Button, Title } from "./Button";
+import { NewsCard } from './components/NewsCard/NewsCard'
 
 function App() {
     return (
         <>
-            <Button/>
-            <Title/>
+            <NewsCard/>
             <div className="App">
             </div>
         </>

@@ -1,9 +1,12 @@
 import React from 'react';
 
-export const Button: React.FC = () => {
+import styles from './Button.module.css';
+
+// @ts-ignore
+export const Button: React.FC = ({ url }) => {
     return (
-        <div className='Button'>
-            Button
+        <div className={styles.button} onClick={() => window.open(url, '_blank')}>
+            Read more
         </div>
     );
 }
