@@ -1,14 +1,10 @@
 import React from 'react';
 import './App.css';
-import { NewsList } from "./components/NewsCard/NewsList";
+import NewsApp from "./NewsApp/NewsApp";
 
 function App() {
     return (
-        <>
-            <NewsList/>
-            <div className="App">
-            </div>
-        </>
+        <NewsApp/>
     );
 }
 
