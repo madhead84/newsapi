@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 
+import './NewsApp.css';
+
 const API_BASE = "https://newsapi.org/v2/everything";
 const API_KEY = "dc71297702b14b8aa2739c646a6a118b";
 
@@ -55,7 +57,7 @@ const NewsApp: React.FC = () => {
                     className="input"
                 />
                 <button onClick={handleSearch}
-                        className="button-serch">
+                        className="button-search">
                     Шукати
                 </button>
                 <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="select">
@@ -74,20 +76,22 @@ const NewsApp: React.FC = () => {
             {loading && <p className="loader">Завантаження...</p>}
             {error && <p className="error">{error}</p>}
 
-            <ol className="ittem-list">
+            <div className="item-list">
                 {news.map((article, index) => (
-                    <li key={index} className="ittem">
+                    <div key={index} className="item">
                         {article.urlToImage && (
                             <img src={article.urlToImage} alt={article.title}
                                  className="image"/>
                         )}
                         <h3 className="news-title">{article.title}</h3>
                         <p className="news-text">{article.description}</p>
-                        <a href={article.url} target="_blank" rel="noopener noreferrer"
-                           className="link-news">Читати далі</a>
-                    </li>
+                        <button>
+                            <a href={article.url} target="_blank" rel="noopener noreferrer"
+                               className="link-news">Читати далі</a>
+                        </button>
+                    </div>
                 ))}
-            </ol>
+            </div>
         </div>
     );
 };
