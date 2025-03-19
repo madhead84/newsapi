@@ -77,15 +77,14 @@ const NewsApp: React.FC = () => {
             <ol className="ittem-list">
                 {news.map((article, index) => (
                     <li key={index} className="ittem">
+                        {article.urlToImage && (
+                            <img src={article.urlToImage} alt={article.title}
+                                 className="image"/>
+                        )}
+                        <h3 className="news-title">{article.title}</h3>
+                        <p className="news-text">{article.description}</p>
                         <a href={article.url} target="_blank" rel="noopener noreferrer"
-                           className="link-news">
-                            {article.urlToImage && (
-                                <img src={article.urlToImage} alt={article.title}
-                                     className="image"/>
-                            )}
-                            <h3 className="news-title">{article.title}</h3>
-                            <p className="news-text">{article.description}</p>
-                        </a>
+                           className="link-news">Читати далі</a>
                     </li>
                 ))}
             </ol>
