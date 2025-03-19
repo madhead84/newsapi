@@ -87,7 +87,7 @@ const NewsApp: React.FC = () => {
                         <p className="news-text">{article.description}</p>
                         <a href={article.url} target="_blank" rel="noopener noreferrer"
                            className="link-news">
-                            <button>Читати далі</button>
+                            <button>Читати далі...</button>
                         </a>
                     </div>
                 ))}
