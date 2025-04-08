@@ -8,8 +8,8 @@ interface NewsArticle {
     urlToImage: string;
 }
 
-let API_KEY = process.env.REACT_APP_API_KEY;
-let API_BASE = process.env.REACT_APP_API_BASE;
+const API_KEY = process.env.REACT_APP_API_KEY;
+const API_BASE = process.env.REACT_APP_API_BASE;
 
 const fetchNews = async (query: string, sortBy: string, language: string): Promise<{ articles: NewsArticle[] }> => {
     const response = await fetch(`${API_BASE}?q=${query}&sortBy=${sortBy}&language=${language}&apiKey=${API_KEY}`);
