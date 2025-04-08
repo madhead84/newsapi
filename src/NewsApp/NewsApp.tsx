@@ -1,9 +1,5 @@
 import React, { useEffect, useState } from "react";
-
 import './NewsApp.css';
-
-const API_BASE = "https://newsapi.org/v2/everything";
-const API_KEY = "dc71297702b14b8aa2739c646a6a118b";
 
 interface NewsArticle {
     title: string;
@@ -11,6 +7,9 @@ interface NewsArticle {
     url: string;
     urlToImage: string;
 }
+
+let API_KEY = process.env.REACT_APP_API_KEY;
+let API_BASE = process.env.REACT_APP_API_BASE;
 
 const fetchNews = async (query: string, sortBy: string, language: string): Promise<{ articles: NewsArticle[] }> => {
     const response = await fetch(`${API_BASE}?q=${query}&sortBy=${sortBy}&language=${language}&apiKey=${API_KEY}`);
