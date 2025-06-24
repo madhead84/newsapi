@@ -1,0 +1,25 @@
+.header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    height: 3rem;
+    width: 100%;
+    justify-content: center;
+    padding: .5rem 0;
+    background-color: #e7e7e7;
+}
+
+.header .input,
+.header .select,
+.header .buttonSearch {
+    height: 2rem;
+}
+
+.header .input {
+    height: 1.65rem;
+}
+
+.header .buttonSearch,
+.header .select {
+    margin-right: .5rem;
+}
