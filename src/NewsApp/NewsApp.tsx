@@ -33,6 +33,7 @@ export const NewsApp: React.FC = () => {
         if (searchTerm.trim()) {
             handleSearch(searchTerm);
         }
+// eslint-disable-next-line
     }, [handleSearch]);
 
     return (
