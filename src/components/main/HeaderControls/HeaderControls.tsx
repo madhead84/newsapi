@@ -16,14 +16,14 @@ interface HeaderControlsProps {
 }
 
 export const HeaderControls: React.FC<HeaderControlsProps> = ({
-                                                                  searchTerm,
-                                                                  onSearchTermChange,
-                                                                  onSearch,
-                                                                  sortBy,
-                                                                  onSortChange,
-                                                                  language,
-                                                                  onLanguageChange,
-                                                              }) => {
+    searchTerm,
+    onSearchTermChange,
+    onSearch,
+    sortBy,
+    onSortChange,
+    language,
+    onLanguageChange,
+}) => {
     const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
         if (e.key === "Enter" && searchTerm.trim()) {
             onSearch();

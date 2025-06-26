@@ -11,13 +11,13 @@ interface InputProps {
 }
 
 export const Input: React.FC<InputProps> = ({
-                                                type = "text",
-                                                value,
-                                                onChange,
-                                                onKeyDown,
-                                                placeholder = "",
-                                                className = "",
-                                            }) => {
+    type = "text",
+    value,
+    onChange,
+    onKeyDown,
+    placeholder = "",
+    className = "",
+}) => {
     return (
         <input
             type={type}
