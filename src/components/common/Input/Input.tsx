@@ -5,6 +5,7 @@ interface InputProps {
     type?: string;
     value: string;
     onChange: (value: string) => void;
+    onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
     placeholder?: string;
     className?: string;
 }
@@ -13,6 +14,7 @@ export const Input: React.FC<InputProps> = ({
                                                 type = "text",
                                                 value,
                                                 onChange,
+                                                onKeyDown,
                                                 placeholder = "",
                                                 className = "",
                                             }) => {
@@ -21,6 +23,7 @@ export const Input: React.FC<InputProps> = ({
             type={type}
             value={value}
             onChange={(e) => onChange(e.target.value)}
+            onKeyDown={onKeyDown}
             placeholder={placeholder}
             className={`${styles.input} ${className}`}
         />

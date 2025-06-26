@@ -14,7 +14,7 @@ export const NewsItem: React.FC<{ article: NewsArticle }> = ({ article }) => (
         <h3 className="news-title">{article.title}</h3>
         <p className="news-text">{article.description}</p>
         <a href={article.url} target="_blank" rel="noopener noreferrer" className="link-news">
-            <button>Читати далі...</button>
+            Читати далі...
         </a>
     </div>
 );
