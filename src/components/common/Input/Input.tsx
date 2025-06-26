@@ -18,6 +18,7 @@ export const Input: React.FC<InputProps> = ({
     placeholder = "",
     className = "",
 }) => {
+
     return (
         <input
             type={type}
