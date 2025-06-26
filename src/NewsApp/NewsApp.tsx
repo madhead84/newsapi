@@ -33,7 +33,7 @@ export const NewsApp: React.FC = () => {
         if (searchTerm.trim()) {
             handleSearch(searchTerm);
         }
-    }, []);
+    }, [handleSearch]);
 
     return (
         <div className={styles.wrapper}>
