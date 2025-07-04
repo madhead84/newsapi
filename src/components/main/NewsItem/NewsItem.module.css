@@ -1,0 +1,15 @@
+.item {
+    width: 20rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.image {
+    height: 15rem;
+    width: 100%;
+}
+
+.item a {
+    margin-top: auto;
+}
